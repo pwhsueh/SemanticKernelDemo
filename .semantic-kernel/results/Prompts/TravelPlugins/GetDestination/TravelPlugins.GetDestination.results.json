@@ -1,0 +1,36 @@
+{
+    "version": "1.0",
+    "pluginName": "TravelPlugins",
+    "functionName": "GetDestination",
+    "description": "Identify the destination of the user's travel plans",
+    "filePath": "Prompts/TravelPlugins/GetDestination/skprompt.txt",
+    "results": [
+        {
+            "completionConfig": {
+                "serviceId": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentName": null,
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "modelId": "gpt-4",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "我想要去北投泡溫泉"
+                }
+            ],
+            "executionSettings": {},
+            "output": {
+                "prompt": "<message role=\"system\">\n指示：識別用戶想要旅行的目的地。\n</message>\n<message role=\"user\">\n我對休假感到非常興奮！我和伴侶正在考慮去希臘的聖托里尼！我絕對愛希臘食物，迫不及待想去一個溫暖的地方。\n</message>\n<message role=\"assistant\">聖托里尼，希臘\n</message>\n\n<message role=\"user\">我想要去北投泡溫泉</message>",
+                "durationInMilliseconds": 1314.5554,
+                "inputTokens": 154,
+                "outputTokens": 6,
+                "result": "北投，台灣",
+                "chatCompletionResult": "北投，台灣"
+            }
+        }
+    ]
+}

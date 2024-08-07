@@ -1,0 +1,27 @@
+[
+  {
+    "title": "感性",
+    "artist": "王心凌",
+    "genre": "華語流行"
+  },
+  {
+    "title": "心願",
+    "artist": "Ella",
+    "genre": "華語流行"
+  },
+  {
+    "title": "有時候我討厭自己",
+    "artist": "潘若迪",
+    "genre": "流行"
+  },
+  {
+    "title": "想你三千次",
+    "artist": "831",
+    "genre": "搖滾"
+  },
+  {
+    "title": "告白",
+    "artist": "Gboyswag, 蕭秉治",
+    "genre": "嘻哈"
+  }
+]

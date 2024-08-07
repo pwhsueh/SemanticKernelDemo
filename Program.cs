@@ -16,25 +16,18 @@ builder.AddOpenAIChatCompletion(
 
 
 var kernel = builder.Build();
-var prompts = kernel.ImportPluginFromPromptDirectory("Prompts/TravelPlugins");
 
-ChatHistory history = [];
-string input = @"我正在計劃和女朋友一起的紀念交往周年旅行。我們喜歡徒步旅行、山脈和海灘。我們的旅行預算是台幣$50000。";
+kernel.ImportPluginFromType<MusicLibraryPlugin>();
 
-var result = await kernel.InvokeAsync<string>(prompts["SuggestDestinations"],
-    new() { { "input", input } });
-
-Console.WriteLine(result);
-history.AddUserMessage(input);
-history.AddAssistantMessage(result);
-
-Console.WriteLine("您想去哪裡？");
-input = Console.ReadLine();
-
-result = await kernel.InvokeAsync<string>(prompts["SuggestActivities"],
-    new() {
-        { "history", history },
-        { "destination", input },
+var result = await kernel.InvokeAsync(
+    "MusicLibraryPlugin",
+    "AddToRecentlyPlayed",
+    new()
+    {
+        ["artist"] = "831",
+        ["song"] = "有一種悲傷叫蠢蛋",
+        ["genre"] = "搖滾"
     }
 );
+
 Console.WriteLine(result);
