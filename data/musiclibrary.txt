@@ -1,0 +1,102 @@
+[
+  {
+    "title": "晴天",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "七里香",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "簡單愛",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "愛在西元前",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "稻香",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "告白氣球",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "雙截棍",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "聽媽媽的話",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "說好的幸福呢",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "夜曲",
+    "artist": "周杰倫",
+    "genre": "華語流行"
+  },
+  {
+    "title": "倔強",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "突然好想你",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "知足",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "你不是真正的快樂",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "戀愛ing",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "溫柔",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "OAOA",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "乾杯",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "知足",
+    "artist": "五月天",
+    "genre": "搖滾"
+  },
+  {
+    "title": "孫悟空",
+    "artist": "五月天",
+    "genre": "搖滾"
+  }
+]

@@ -16,18 +16,16 @@ builder.AddOpenAIChatCompletion(
 
 
 var kernel = builder.Build();
-
 kernel.ImportPluginFromType<MusicLibraryPlugin>();
 
-var result = await kernel.InvokeAsync(
-    "MusicLibraryPlugin",
-    "AddToRecentlyPlayed",
-    new()
-    {
-        ["artist"] = "831",
-        ["song"] = "有一種悲傷叫蠢蛋",
-        ["genre"] = "搖滾"
-    }
-);
+string prompt = @"以下是用戶可用的音樂清單：
+    {{MusicLibraryPlugin.GetMusicLibrary}} 
 
+    以下是用戶最近播放的音樂清單：
+    {{MusicLibraryPlugin.GetRecentPlays}}
+
+   根據他們最近播放的音樂，從列表中推薦下一首播放的歌曲.請列出1首歌曲名稱"
+;
+
+var result = await kernel.InvokePromptAsync(prompt);
 Console.WriteLine(result);

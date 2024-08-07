@@ -38,4 +38,12 @@ public class MusicLibraryPlugin
 
         return $"新增 '{song}' 到最近播放清單";
     }
+
+    [KernelFunction, Description("獲取用戶可用的音樂清單")]
+    public static string GetMusicLibrary()
+    {
+        string dir = Directory.GetCurrentDirectory();
+        string content = File.ReadAllText($"{dir}/data/musiclibrary.txt");
+        return content;
+    }
 }
