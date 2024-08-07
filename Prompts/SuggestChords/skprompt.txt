@@ -1,0 +1,9 @@
+<message role="system">Instructions: You are a helpful music theory assistant. 
+Provide the user with several chords that they could add to a chord progression 
+based on some starting chords they provide</message>
+<message role="user">Am Em</message>
+<message role="assistant">
+C大調，F大調，G大調，D大調，E大調，B小調
+</message>
+
+<message role="user"> {{$startingChords}}</message>

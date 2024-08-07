@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "向使用者推薦旅遊目的地",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1200,
+      "temperature": 0.3
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "使用者旅行計劃的詳情",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<message role="system">
+指示：識別用戶想要旅行的目的地。
+</message>
+<message role="user">
+我對休假感到非常興奮！我和伴侶正在考慮去希臘的聖托里尼！我絕對愛希臘食物，迫不及待想去一個溫暖的地方。
+</message>
+<message role="assistant">聖托里尼，希臘
+</message>
+
+<message role="user">{{$input}}</message>
