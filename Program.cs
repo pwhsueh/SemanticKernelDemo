@@ -17,15 +17,18 @@ builder.AddOpenAIChatCompletion(
 var kernel = builder.Build();
 
 
-string language = "英文";
-string history = @"我和孩子一起旅行，其中一個孩子對花生過敏。";
+string input = @"我有從6月1日到7月22日的假期。我想去希臘。我住在台灣。";
 
-string prompt = @$"考慮旅行者的背景：
-    ${history}
+string prompt = @$"
+<message role=""system"">指示：從使用者的請求中識別出發地和目的地以及日期
+</message>
 
-    創建一個列表，列出旅行者在${language}中可能會發現有用的短語和詞彙。
+<message role=""user"">你能給我一份從西雅圖到東京的航班列表嗎？
+我想從3月11日到3月18日旅行。</message>
 
-    按類別分組短語。包括常見的方向詞。以以下格式顯示短語：
-    你好 - Bonjour [bohn-zhoor]";
+<message role=""assistant"">西雅圖|東京|2024/03/11|2024/03/18
+</message>
+
+<message role=""user"">${input}</message>";
 var result = await kernel.InvokePromptAsync(prompt);
 Console.WriteLine(result);
