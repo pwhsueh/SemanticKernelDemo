@@ -1,0 +1,7 @@
+根據用戶最近播放的歌曲：
+{{$recentlyPlayedSongs}}
+
+和即將舉行的音樂會清單：
+{{$upcomingConcerts}}
+
+推薦一場即將舉行的音樂會。用戶住在{{$location}}，請推薦一場離他們位置較近的相關音樂會。

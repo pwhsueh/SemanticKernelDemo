@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SemanticKernel" Version="1.6.12" />
+    <PackageReference Include="Microsoft.SemanticKernel.Planners.Handlebars" Version="1.16.12-preview" />
     <PackageReference Include="Microsoft.SemanticKernel.Plugins.Core" Version="1.6.12-alpha" />
   </ItemGroup>
 

@@ -1,0 +1,64 @@
+[
+    {
+        "artist": "Tori Kelly",
+        "concerts": [
+            { "location": "台北市, 台灣", "date": "8/17/2024" }
+        ]
+    },
+    {
+        "artist": "Conan Gray",
+        "concerts": [
+            { "location": "台北南港展覽館1館, 台北市, 台灣", "date": "8/30/2024" }
+        ]
+    },
+    {
+        "artist": "Laufey",
+        "concerts": [
+            { "location": "台北國際會議中心 (TICC), 台北市, 台灣", "date": "8/31/2024" }
+        ]
+    },
+    {
+        "artist": "(G)I-dle",
+        "concerts": [
+            { "location": "台北小巨蛋, 台北市, 台灣", "date": "10/5/2024" },
+            { "location": "台北小巨蛋, 台北市, 台灣", "date": "10/6/2024" }
+        ]
+    },
+    {
+        "artist": "Paul van Dyk",
+        "concerts": [
+            { "location": "Omni Nightclub, 台北市, 台灣", "date": "8/23/2024" }
+        ]
+    },
+    {
+        "artist": "Hsiao Hung Jen",
+        "concerts": [
+            { "location": "Clapper Studio, 台北市, 台灣", "date": "8/24/2024" }
+        ]
+    },
+    {
+        "artist": "Sasha Alex Sloan",
+        "concerts": [
+            { "location": "台北國際會議中心 (TICC), 台北市, 台灣", "date": "8/29/2024" }
+        ]
+    },
+    {
+        "artist": "Bruno Mars",
+        "concerts": [
+            { "location": "高雄國家體育場, 高雄市, 台灣", "date": "9/8/2024" },
+            { "location": "高雄國家體育場, 高雄市, 台灣", "date": "9/14/2024" }
+        ]
+    },
+    {
+        "artist": "Ed Sheeran",
+        "concerts": [
+            { "location": "高雄國家體育場, 高雄市, 台灣", "date": "2/3/2024" }
+        ]
+    },
+    {
+        "artist": "Sunset Rollercoaster (落日飛車)",
+        "concerts": [
+            { "location": "台北流行音樂中心, 台北市, 台灣", "date": "9/19/2024" }
+        ]
+    }
+]

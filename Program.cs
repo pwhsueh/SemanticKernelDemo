@@ -1,5 +1,6 @@
 ﻿using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
+using Microsoft.SemanticKernel.Planning.Handlebars;
 using Microsoft.SemanticKernel.Plugins.Core;
 
 const string api_Key = "";
@@ -12,20 +13,19 @@ builder.AddOpenAIChatCompletion(
     modelId: "gpt-4o" // optional
 );
 
-#pragma warning disable SKEXP0050 
-
+#pragma warning disable SKEXP0060
 
 var kernel = builder.Build();
 kernel.ImportPluginFromType<MusicLibraryPlugin>();
+kernel.ImportPluginFromType<MusicConcertPlugin>();
+kernel.ImportPluginFromPromptDirectory("Prompts");
 
-string prompt = @"以下是用戶可用的音樂清單：
-    {{MusicLibraryPlugin.GetMusicLibrary}} 
+var planner = new HandlebarsPlanner(new HandlebarsPlannerOptions() { AllowLoops = true });
 
-    以下是用戶最近播放的音樂清單：
-    {{MusicLibraryPlugin.GetRecentPlays}}
+string location = "高雄";
+string goal = @$"根據用戶最近播放的音樂，推薦一場位於${location}的音樂會";
 
-   根據他們最近播放的音樂，從列表中推薦下一首播放的歌曲.請列出1首歌曲名稱"
-;
+var plan = await planner.CreatePlanAsync(kernel, goal);
+var result = await plan.InvokeAsync(kernel);
 
-var result = await kernel.InvokePromptAsync(prompt);
-Console.WriteLine(result);
+Console.WriteLine($"Results: {result}");
