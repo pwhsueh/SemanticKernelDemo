@@ -1,0 +1,28 @@
+{{#if suggestConcert}}
+    {{!-- Step 1: Get the user's recently played songs --}}
+    {{set "recentlyPlayedSongs" (MusicLibraryPlugin-GetRecentPlays)}}
+
+    {{!-- Step 2: Get upcoming music concerts --}}
+    {{set "upcomingConcerts" (MusicConcertPlugin-GetTours)}}
+
+    {{!-- Step 3: Set the user's location   --}}
+    {{set "location" location}}
+
+    {{!-- Step 4: Use the Prompts-SuggestConcert helper to get a concert recommendation --}}
+    {{set "concertRecommendation" (Prompts-SuggestConcert upcomingConcerts=upcomingConcerts recentlyPlayedSongs=recentlyPlayedSongs location=location)}}
+
+    {{!-- Step 5: Print the concert recommendation --}}
+    {{json concertRecommendation}}
+{{else}}
+    {{!-- Step 1: Get user's recently played songs --}}
+    {{set "recentlyPlayedSongs" (MusicLibraryPlugin-GetRecentPlays)}}
+
+    {{!-- Step 2: Get user's music library --}}
+    {{set "musicLibrary" (MusicLibraryPlugin-GetMusicLibrary)}}
+
+    {{!-- Step 3: Suggest a song based on recently played songs and music library --}}
+    {{set "suggestedSong" (SuggestSongPlugin-SuggestSong recentlyPlayedSongs musicLibrary)}}
+
+    {{!-- Step 4: Output the suggested song --}}
+    {{json suggestedSong}}
+{{/if}}
